@@ -1,0 +1,18 @@
+.wrapper{
+    min-height:100vh;
+    width: 1050px;
+    background: #fff;
+    display: flex ;
+    flex-direction: column;
+    justify-content: space-between ;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.main{
+    flex: 1 1 auto;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

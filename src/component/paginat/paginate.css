@@ -1,0 +1,11 @@
+.ant-pagination.mini{
+    display: flex !important;
+    align-items: baseline !important;
+    margin-bottom: 18px;
+}
+.ant-pagination-item-active{
+    background-color: #1890ff !important;
+}
+.ant-pagination-item-active a{
+    color: #fff !important;
+}
