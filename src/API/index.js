@@ -1,4 +1,4 @@
-import {getAll, fetchGenres, fetchSession, getRatedMovies, createPostRate} from './service'
+import {getAll, fetchGenres, fetchSession, getRatedMovies, createPostRate, getSearchQuery} from './service'
 
 const API = {
     getAll,
@@ -6,7 +6,7 @@ const API = {
     fetchSession,
     getRatedMovies,
     createPostRate,
-    // getSearchQuery
+    getSearchQuery
 }
 
 export default API

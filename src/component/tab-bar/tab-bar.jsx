@@ -8,14 +8,14 @@ const TabBar = ({onChangeTabs}) => {
         <Tabs defaultActiveKey="1" centered onTabClick={(e)=> onChangeTabs(e)}>
             <TabPane
                 tab={
-                    <span>Tab 1</span>
+                    <span>Search</span>
                 }
                 key="1"
             >
 
             </TabPane>
             <TabPane tab={
-                <span>Tab 2</span>
+                <span>Rated</span>
                 }
                 key="2"
             >

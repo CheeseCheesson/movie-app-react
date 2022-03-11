@@ -12,7 +12,7 @@ export const getAll = async (page = 1) => {
     return response
 }
 export const fetchGenres = async () => {
-    const {data} = await axios.get(`${BASE}/genre/movie/list?api_key=${APIKEY}&language=en-US`)
+    const {data} = await axios.get(`${BASE}/genre/movie/list?api_key=${APIKEY}&language=ru-US`)
     return data
 }
 
@@ -26,7 +26,7 @@ export const fetchSession = async () => {
 export const createPostRate = async (id, stars) => {
 if(localStorage.getItem('guestSessionID')){
   return await fetch(
-    `${BASE}/movie/${id}/rating?api_key=${APIKEY}&guest_session_id=${localStorage.getItem('guestSessionID')}`,
+    `${BASE}/movie/${id}/rating?api_key=${APIKEY}&language=ru-US&guest_session_id=${localStorage.getItem('guestSessionID')}`,
     {
       method: 'POST',
       headers: {
@@ -55,7 +55,11 @@ if(localStorage.getItem('guestSessionID')){
 export const getRatedMovies =  () => {
   return localStorage.getItem('rated')
 }
-// export const getSearchQuery = async (query = 'return', page) => {
-//   return await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&query=return&page=${page}`)
-// }
-// 'https://api.themoviedb.org/3/search/movie?api_key=44ead1c60d2a28ed7c4cb77e1a659793&query=&page=1'
+
+export const getSearchQuery = async (searchValue, page) => {
+    if (!searchValue) {
+        return
+    }
+    const {data} = await axios.get(`${BASE}/search/movie?api_key=${APIKEY}&language=ru-US&query=${searchValue}&page=${page}`)
+    return data
+}
